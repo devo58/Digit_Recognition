@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='/digit_draw.js') }}"></script>
+
+</head>
+    <header>
+    
+    </header>
+
+<body class="container flex">
+    
+    <form class="card-body " id = "myForm" action="{{ url_for('recognite')}}" method="POST" enctype="multipart/form-data">
+        <div class="container ">
+            <div class="col"><h1>Digit Recognition</h1></div>
+            <div class="col">
+                <canvas class="card-body rounded-lg m-4" id="canvas" name ="draw" width="400" height="400">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            drawCanvas();
+                        });
+                    </script></div>
+                </canvas>
+            </div>
+            </div class="col">
+                <input type="hidden" id = 'url' name="url" value="">
+                <input class="w-50 btn btn-success btn-sm" type="submit" id = 'predict' value="Predict" onclick="return save();">
+                <input class="w-50 btn btn-outline-danger btn-lg m-2" type="submit" id = 'clean' value="Clean" onclick="return redraw();">
+            </div>
+        </div>
+    </form>
+    
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='/digit_draw.js') }}"></script>
+
+</head>
+    <header>
+    
+    </header>
+
+<body class="flex">
+    
+    <form class=" " id = "myForm " action="{{ url_for('recognite')}}" method="POST" enctype="multipart/form-data">
+        <div class=" container">
+            <div class="form-group  m-5"><h1>-Digit Recognition-</h1></div>
+            <div class="">
+                <canvas class="mb-4" id="canvas" name ="draw" width="400" height="400">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            drawCanvas();
+                        });
+                    </script></div>
+                </canvas>
+            </div>
+            </div class="col m-2">
+                <input type="hidden" id = 'url' name="url" value="">
+                <input class="w-25 btn btn-success btn-sm" type="submit" id = 'predict' value="Predict" onclick="return save();">
+
+            </div>
+        </div>
+    </form>
+    <input class="w-25 btn btn-outline-danger btn-lg m-2" type="submit" id = 'clean' value="Clean" onclick="window.location.reload(); ">
+
+    </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing App</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='digit_draw.js') }}"></script>
+
+</head>
+    <header>
+     Drawing App
+    
+    </header>
+
+<body>
+    <form id = "myForm" action="{{ url_for('recognite')}}" method="POST" enctype="multipart/form-data">
+        <canvas id="canvas", name ="draw" width="400" height="400">
+        <script type="text/javascript">
+            $(document).ready(function() {
+                drawCanvas();
+            });
+        </script>
+        </canvas>
+        <input type="hidden" id = 'url' name="url" value="">
+        <input type="submit" id = 'predict' value="Predict" onclick="return save();">
+    </form>
+    
+    </body>
+</html> -->

@@ -1,0 +1,20 @@
+in first setup:
+    pip install vitrualenvwrapper-win
+    mkvirtualenv virtual_env  (virtual env name can be change)
+setup flusk into virtual env:
+    pip install flask
+
+activating virtual env : workon virtual_env
+deactivating the virtual env : deactivate
+before working with py file : set FLASK_APP=app.py  (file name can be change)
+starting live server : flask run
+for auto refresh and debug : set FLASK_DEBUG=1
+
+if,
+    you ad following code into your file :
+        app.config["DEBUG"] = True
+    or,
+        if __name__=='__main__'
+            app.run(debug=True)
+
+then you can start the working with following command : python app.py  (file name can be change)
